@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Git Fundamentals</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@700&display=swap" rel="stylesheet">
+  </head>
+
+  <style>
+
+    *{
+        font-family: 'Gabarito', sans-serif;
+    }
+
+    body{
+        /* background-color: #242025;
+        background-image: linear-gradient(to bottom right, #242025, #1c181d); */
+        background-color: mediumvioletred;
+        color: white;
+    }
+
+    p{
+        color: white;
+    }
+
+    h5{
+        color: white;
+    }
+
+    /* footer{
+        color: white;
+        background-color: mediumvioletred;
+        padding-left: 3%;
+    } */
+
+    li{
+        color: white;
+    }
+
+    .dropdown-item:focus{
+        background-color: #121012;
+    }
+
+    .dropdown-item:hover{
+        background-color: #242025;
+        text-decoration: underline;
+    }
+
+    a.dropdown-item.active{
+        background-color: #e1c9e5;
+        color: #121012;
+    }
+
+    /* .c-item{
+      height: 480px;
+
+    } */
+
+    .c-img{
+      height: 100%;
+      object-fit: cover;
+    }
+
+  </style>
+
+  <body>
+
+
+    <header class="row align-items-center justify-content-evenly p-5 m-0">
+      <h1 class="display-1 text-center p-2 m-5">Git Fundamentals</h1>
+      <div class="col-sm-10 col-md-10 col-lg-5">
+        <h3 class="p-1 m-4 mb-2 text-center">Want to learn about Git?</h3>
+        <p class="p-1 m-4 text-center">You're in the right place. Scroll down if you're ready to gain a better understanding of the fundamentals of Git.</p>
+    </div>
+
+    <div class="col-sm-10 col-md-10 col-lg-5">
+        <img src="img/gitlogo.png" class="d-block w-100 c-img rounded-5" alt="">
+    </div>
+    </header>
+
+
+    <div class="row align-items-center justify-content-evenly p-5 m-0" style="background-color: darkmagenta;">
+        <h1 class="p-1 m-4 pb-4 text-center">Setting Up the Environment</h1>
+        <div class="col-sm-10 col-md-10 col-lg-5">
+            <h3 class="p-1 m-4 mb-2 text-center">Install VS Code</h3>
+            <ol>
+                <li>Go to <a href="https://code.visualstudio.com/docs/setup/setup-overview">this link</a> and select your operating system.</li>
+                <li>Follow the platform-specific instructions to download VS Code onto your computer.</li>
+            </ol>
+        </div>
+
+        <div class="col-sm-10 col-md-10 col-lg-5">
+            <img src="img/vscode.png" class="d-block w-100 c-img rounded-5" alt="">
+        </div>
+    </div>
+    <div class="row align-items-center justify-content-evenly p-5 m-0" style="background-color: darkmagenta">
+        <div class="col-sm-10 col-md-10 col-lg-5">
+            <h3 class="p-1 m-4 mb-2 text-center">Install GitHub</h3>
+            <ol>
+                <li>Go to <a href="https://github.com/git-guides/install-git">this link</a> and select your operating system.</li>
+                <li>Follow the platform-specific instructions to download GitHub onto your computer.</li>
+            </ol>
+        </div>
+
+        <div class="col-sm-10 col-md-10 col-lg-5">
+            <img src="img/githubdesktop.png" class="d-block w-100 c-img rounded-5" alt="">
+        </div>
+    </div>
+    <div class="row align-items-center justify-content-evenly p-5 m-0" style="background-color: darkmagenta">
+        <div class="col-sm-10 col-md-10 col-lg-5">
+            <h3 class="p-1 m-4 mb-2 text-center">Configure Git within VS Code</h3>
+            <ol>
+                <li>In VS Code, go to Code > Settings > Settings.</li>
+                <li>In the search bar, type in "git: enabled" and make sure the box is checked.</li>
+                <li>If you do not already have a GitHub account, go ahead and create one.</li>
+                <li>Go to the Terminal, and type in [git config --global user.name "your username"] without the brackets, and also replace the part in quotes with your actual GitHub username.</li>
+                <li>Type in [git config --global user.email "youremail@example.com"] without the brackets, and also replace the part in quotes with your actual email linked to your GitHub account.</li>
+                <li>To verify that the configuration was done correctly, type in [git config --global --list] without the brackets and make sure all the information is correct.</li>
+            </ol>
+        </div>
+
+        <div class="col-sm-10 col-md-10 col-lg-5">
+            <img src="img/vscodegitterminal.png" class="d-block w-100 c-img rounded-5" alt="">
+        </div>
+    </div>
+
+    
+    <div class="row align-items-center justify-content-evenly p-5 m-0" style="background-color: mediumvioletred;">
+        <h1 class="p-1 m-4 pb-4 text-center">Creating and Cloning a GitHub Repository</h1>
+        <div class="col-sm-10 col-md-10 col-lg-5">
+            <h3 class="p-1 m-4 mb-2 text-center">Create a new repository on GitHub</h3>
+            <ol>
+                <li>Click the plus button at the top right of the page, and then select "New repository."</li>
+                <li>Name your repository.</li>
+                <li>Choose whether you want it to be public or private.</li>
+                <li>Initialize the repository with a README.</li>
+                <li>Click "Create repository."</li>
+            </ol>
+        </div>
+
+        <div class="col-sm-10 col-md-10 col-lg-5">
+            <img src="img/createrepingithub.png" class="d-block w-100 c-img rounded-5" alt="">
+        </div>
+    </div>
+    <div class="row align-items-center justify-content-evenly p-5 m-0" style="background-color: mediumvioletred">
+        <div class="col-sm-10 col-md-10 col-lg-5">
+            <h3 class="p-1 m-4 mb-2 text-center">Clone a Repository Using VS Code's Integrated Git Support</h3>
+            <ol>
+                <li>Copy the URL of your repository in GitHub.</li>
+                <li>Open the command palette in VS Code, and type "Git: Clone."</li>
+                <li>Add the URL of your repository.</li>
+                <li>Select where on your desktop you want your repository to be cloned.</li>
+                <li>Open the cloned repository.</li>
+            </ol>
+        </div>
+
+        <div class="col-sm-10 col-md-10 col-lg-5">
+            <img src="img/clonerepositoryint.png" class="d-block w-100 c-img rounded-5" alt="">
+        </div>
+    </div>
+
+    <div class="row align-items-center justify-content-evenly p-5 m-0" style="background-color: darkmagenta;">
+        <h1 class="p-1 m-4 pb-4 text-center">Basic Git Operations in VS Code</h1>
+        <div class="col-sm-10 col-md-10 col-lg-5">
+            <h3 class="p-1 m-4 mb-2 text-center">Perform Basic Git Operations through the VS Code GUI</h3>
+            <ul>
+                <li>Status: The git status command shows the current state of your Git working directory and staging area.</li>
+                <li>Add: The git add command adds new or changed files in your working directory to the Git staging area.</li>
+                <li>Commit: The git commit command creates a commit, which is like a snapshot of your repository.</li>
+                <li>Push: The git push command uploads all local branch commits to the corresponding remote branch.</li>
+                <li>Pull: The git pull command updates your current local working branch, and all of the remote tracking branches.</li>
+            </ul>
+        </div>
+
+        <div class="col-sm-10 col-md-10 col-lg-5">
+            <img src="img/basicops.png" class="d-block w-100 c-img rounded-5" alt="">
+        </div>
+    </div>
+
+
+    <div class="row align-items-center justify-content-evenly p-5 m-0" style="background-color: mediumvioletred;">
+        <h1 class="p-1 m-4 pb-4 text-center">Branching with VS Code</h1>
+        <div class="col-sm-10 col-md-10 col-lg-5">
+            <h3 class="p-1 m-4 mb-2 text-center">Creating and Switching Between Branches in VS Code</h3>
+            <ul>
+                <li>To create a new branch, click the name of the current branch in the bottom left and then select "Create new branch..."</li>
+                <li>To switch to another branch, click the name of the current branch in the bottom left and select a new branch from the list that appears.</li>
+            </ul>
+        </div>
+
+        <div class="col-sm-10 col-md-10 col-lg-5">
+            <img src="img/gitbranches.png" class="d-block w-100 c-img rounded-5" alt="">
+        </div>
+    </div>
+    <div class="row align-items-center justify-content-evenly p-5 m-0" style="background-color: mediumvioletred">
+        <div class="col-sm-10 col-md-10 col-lg-5">
+            <h3 class="p-1 m-4 mb-2 text-center">Branching for Feature Development and Bug Fixes</h3>
+            <ul>
+                <li style="list-style: none;">Branching can help with...
+                    <ul style="list-style: disc;">
+                        <li>Facilitating code reviews using merge requests</li>
+                        <li>Experimenting with new solutions</li>
+                        <li>Tracking changes</li>
+                        <li>Dealing with bugs</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-sm-10 col-md-10 col-lg-5">
+            <img src="img/clonerepositoryint.png" class="d-block w-100 c-img rounded-5" alt="">
+        </div>
+    </div>
+
+
+    <div class="row align-items-center justify-content-evenly p-5 m-0" style="background-color: darkmagenta;">
+        <h1 class="p-1 m-4 pb-4 text-center">Working with Remote Repositories</h1>
+        <div class="col-sm-10 col-md-10 col-lg-5">
+            <h3 class="p-1 m-4 mb-2 text-center">Add and Manage Remote Repositories from VS Code</h3>
+            <ul>
+                <li style="list-style: none;">Add Remote Repositories
+                    <ol>
+                        <li>To add a remote repository from VS Code, first, open the command palette.</li>
+                        <li>Select "Git: Add Remote."</li>
+                        <li>Provide repository URL or pick a repository source.</li>
+                        <li>Enter a remote name.</li>
+                    </ol>
+                </li>
+            </ul>
+            <br>
+            <ul>
+                <li style="list-style: none;">Manage Remote Repositories
+                    <ul style="list-style: disc;">
+                        <li>To manage remote repositories in VS Code, download the Remote Repositories extension for VS Code. With this extension, you can browse, search, edit, and commit to any remote GitHub repository from VS Code.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-sm-10 col-md-10 col-lg-5">
+            <img src="img/remoterepositories.png" class="d-block w-100 c-img rounded-5" alt="">
+        </div>
+    </div>
+    <div class="row align-items-center justify-content-evenly p-5 m-0" style="background-color: darkmagenta">
+        <div class="col-sm-10 col-md-10 col-lg-5">
+            <h3 class="p-1 m-4 mb-2 text-center">Push to and Pull from Remote Repositories Through VS Code</h3>
+            <ul>
+                <li style="list-style: none;">Push to
+                    <ol>
+                        <li>Open the command palette in VS Code.</li>
+                        <li>Select "Git: Pull from..."</li>
+                        <li>Pick a branch to pull from.</li>
+                    </ol>
+                </li>
+            </ul>
+            <br>
+            <ul>
+                <li style="list-style: none;">Pull from
+                    <ol>
+                        <li>Open the command palette in VS Code.</li>
+                        <li>Select "Git: Push to..."</li>
+                        <li>Pick a remote to publish the branch to.</li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-sm-10 col-md-10 col-lg-5">
+            <img src="img/pullfrom.png" class="d-block w-100 c-img rounded-5" alt="">
+        </div>
+    </div>
+
+
+        <div class="row align-items-center justify-content-evenly p-5 m-0" style="background-color: mediumvioletred;">
+            <h1 class="p-1 m-4 pb-4 text-center">Pull Requests and Code Reviews within VS Code</h1>
+            <div class="col-sm-10 col-md-10 col-lg-5">
+                <h3 class="p-1 m-4 mb-2 text-center">Create GitHub Pull Requests Using VS Code</h3>
+                <ol>
+                    <li>Download GitHub Pull Requests and Issues extension for VS Code.</li>
+                    <li>Go to the GitHub Pull Requests tab.</li>
+                    <li>Click the Create Pull Request button.</li>
+                    <li>Select a target branch.</li>
+                    <li>Add a title and description.</li>
+                    <li>Click Create.</li>
+                </ol>
+            </div>
+    
+            <div class="col-sm-10 col-md-10 col-lg-5">
+                <img src="img/pullrequestext.png" class="d-block w-100 c-img rounded-5" alt="">
+            </div>
+        </div>
+        <div class="row align-items-center justify-content-evenly p-5 m-0" style="background-color: mediumvioletred">
+            <div class="col-sm-10 col-md-10 col-lg-5">
+                <h3 class="p-1 m-4 mb-2 text-center">Pull Request: What is it?</h3>
+                <ul>
+                    <li>A pull request in GitHub is a suggested change to a repository that lets contributors submit changes to the codebase, suggesting improvements or fixes.</li>
+                </ul>
+            </div>
+    
+            <div class="col-sm-10 col-md-10 col-lg-5">
+                <img src="img/whatispr.png" class="d-block w-100 c-img rounded-5" alt="">
+            </div>
+    
+
+    <!-- <footer class="py-4 text-center">
+        &copy; 2024. TCID 3800.
+    </footer> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
